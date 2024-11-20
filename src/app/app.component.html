@@ -1,163 +1,191 @@
 <div class="max-w-4xl mx-auto p-5">
-    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="space-y-6">
-      <div class="grid grid-cols-2 gap-4">
-        <!-- First Name -->
-        <div>
-          <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
-          <input
-            id="firstName"
-            formControlName="firstName"
-            class="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            type="text"
-          />
-          <div *ngIf="form.get('firstName')?.touched && form.get('firstName')?.invalid" class="text-red-500 text-sm">
-            First Name is required
-          </div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="space-y-6">
+    <div class="grid grid-cols-2 gap-4">
+      <!-- First Name -->
+      <div>
+        <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
+        <input
+          id="firstName"
+          formControlName="firstName"
+          class="mt-1 p-2 border border-gray-300 rounded-md w-full"
+          type="text"
+        />
+        <div *ngIf="form.get('firstName')?.touched && form.get('firstName')?.invalid" class="text-red-500 text-sm">
+          First Name is required
         </div>
-        
-        <!-- Middle Name -->
-        <div>
-          <label for="middleName" class="block text-sm font-medium text-gray-700">Middle Name</label>
-          <input
-            id="middleName"
-            formControlName="middleName"
-            class="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            type="text"
-          />
+      </div>
+      
+      <!-- Middle Name -->
+      <div>
+        <label for="middleName" class="block text-sm font-medium text-gray-700">Middle Name</label>
+        <input
+          id="middleName"
+          formControlName="middleName"
+          class="mt-1 p-2 border border-gray-300 rounded-md w-full"
+          type="text"
+        />
+      </div>
+      
+      <!-- Last Name -->
+      <div>
+        <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
+        <input
+          id="lastName"
+          formControlName="lastName"
+          class="mt-1 p-2 border border-gray-300 rounded-md w-full"
+          type="text"
+        />
+        <div *ngIf="form.get('lastName')?.touched && form.get('lastName')?.invalid" class="text-red-500 text-sm">
+          Last Name is required
         </div>
-        
-        <!-- Last Name -->
-        <div>
-          <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
-          <input
-            id="lastName"
-            formControlName="lastName"
-            class="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            type="text"
-          />
-          <div *ngIf="form.get('lastName')?.touched && form.get('lastName')?.invalid" class="text-red-500 text-sm">
-            Last Name is required
-          </div>
+      </div>
+      
+      <!-- Gender -->
+      <div>
+        <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
+        <select
+          id="gender"
+          formControlName="gender"
+          class="mt-1 p-2 border border-gray-300 rounded-md w-full"
+        >
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <div *ngIf="form.get('gender')?.touched && form.get('gender')?.invalid" class="text-red-500 text-sm">
+          Gender is required
         </div>
-        
-        <!-- Gender -->
-        <div>
-          <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
-          <select
-            id="gender"
-            formControlName="gender"
-            class="mt-1 p-2 border border-gray-300 rounded-md w-full"
-          >
-            <option value="">Select Gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Other">Other</option>
-          </select>
-          <div *ngIf="form.get('gender')?.touched && form.get('gender')?.invalid" class="text-red-500 text-sm">
-            Gender is required
-          </div>
+      </div>
+      
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <input
+          id="email"
+          formControlName="email"
+          class="mt-1 p-2 border border-gray-300 rounded-md w-full"
+          type="email"
+        />
+        <div *ngIf="form.get('email')?.touched && form.get('email')?.invalid" class="text-red-500 text-sm">
+          Enter a valid email
         </div>
-        
-        <!-- Email -->
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-          <input
-            id="email"
-            formControlName="email"
-            class="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            type="email"
-          />
-          <div *ngIf="form.get('email')?.touched && form.get('email')?.invalid" class="text-red-500 text-sm">
-            Enter a valid email
-          </div>
+      </div>
+      
+      <!-- Mobile -->
+      <div>
+        <label for="mobile" class="block text-sm font-medium text-gray-700">Mobile</label>
+        <input
+          id="mobile"
+          formControlName="mobile"
+          class="mt-1 p-2 border border-gray-300 rounded-md w-full"
+          type="text"
+        />
+        <div *ngIf="form.get('mobile')?.touched && form.get('mobile')?.invalid" class="text-red-500 text-sm">
+          Enter a valid 10-digit mobile number
         </div>
-        
-        <!-- Mobile -->
-        <div>
-          <label for="mobile" class="block text-sm font-medium text-gray-700">Mobile</label>
-          <input
-            id="mobile"
-            formControlName="mobile"
-            class="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            type="text"
-          />
-          <div *ngIf="form.get('mobile')?.touched && form.get('mobile')?.invalid" class="text-red-500 text-sm">
-            Enter a valid 10-digit mobile number
-          </div>
+      </div>
+
+      <!-- Date of Birth -->
+      <div>
+        <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth</label>
+        <input
+          id="dob"
+          formControlName="dob"
+          class="mt-1 p-2 border border-gray-300 rounded-md w-full"
+          type="date"
+        />
+        <div *ngIf="form.get('dob')?.touched && form.get('dob')?.invalid" class="text-red-500 text-sm">
+          Date of Birth is required
         </div>
-  
-        <!-- Date of Birth -->
-        <div>
-          <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth</label>
-          <input
-            id="dob"
-            formControlName="dob"
-            class="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            type="date"
-          />
-          <div *ngIf="form.get('dob')?.touched && form.get('dob')?.invalid" class="text-red-500 text-sm">
-            Date of Birth is required
-          </div>
-        </div>
-  
-        <!-- Subjects -->
-        <!-- <div>
-          <label class="block text-sm font-medium text-gray-700">Subjects</label>
-          <div *ngFor="let subject of subjectsFormArray.controls; let i = index" class="flex space-x-2">
+      </div>
+
+      <!-- Subjects -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Subjects</label>
+        <div formArrayName="subjects">
+          <div *ngFor="let subject of subjectsFormArray.controls; let i = index" [formGroupName]="i" class="flex space-x-2">
             <div class="flex-1">
-              <input [formControlName]="i + '.subjectTitle'" placeholder="Subject Title" class="mt-1 p-2 border border-gray-300 rounded-md w-full" type="text" />
+              <input formControlName="subjectTitle" placeholder="Subject Title" class="mt-1 p-2 border border-gray-300 rounded-md w-full" type="text" />
             </div>
             <div class="flex-1">
-              <input [formControlName]="i + '.marks'" placeholder="Marks" class="mt-1 p-2 border border-gray-300 rounded-md w-full" type="number" />
+              <input formControlName="marks" placeholder="Marks" class="mt-1 p-2 border border-gray-300 rounded-md w-full" type="number" />
             </div>
             <button type="button" (click)="removeSubject(i)" class="text-red-500 p-2 rounded-md hover:bg-red-100">
               Delete
             </button>
           </div>
-  
-          <button type="button" (click)="addSubject()" class="mt-4 bg-green-500 text-white p-2 rounded-md hover:bg-green-700">
-            Add Subject
-          </button>
-        </div> -->
+        </div>
+
+        <button type="button" (click)="addSubject()" class="mt-4 bg-green-500 text-white p-2 rounded-md hover:bg-green-700">
+          Add Subject
+        </button>
       </div>
-  
-      <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-700" [disabled]="form.invalid">
-        Submit
-      </button>
-    </form>
-  
-    <!-- Submitted Data Table -->
-    <div class="mt-8">
-      <table class="min-w-full table-auto border-collapse">
-        <thead>
-          <tr class="border-b">
-            <th class="px-4 py-2">Full Name</th>
-            <!-- <th class="px-4 py-2">Middle Name</th>
-            <th class="px-4 py-2">Last Name</th> -->
-            <th class="px-4 py-2">Gender</th>
-            <th class="px-4 py-2">Email</th>
-            <th class="px-4 py-2">Mobile</th>
-            <th class="px-4 py-2">Date of Birth</th>
-            <!-- <th class="px-4 py-2">Subjects</th> -->
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let data of submittedData">
-            <td class="px-4 py-2">{{ data.firstName }} {{ data.middleName }} {{ data.lastName }}</td>
-            <!-- <td class="px-4 py-2">{{ data.middleName }}</td>
-            <td class="px-4 py-2">{{ data.lastName }}</td> -->
-            <td class="px-4 py-2">{{ data.gender }}</td>
-            <td class="px-4 py-2">{{ data.email }}</td>
-            <td class="px-4 py-2">{{ data.mobile }}</td>
-            <td class="px-4 py-2">{{ data.dob | date }}</td>
-            <!-- <td class="px-4 py-2">
-              <ul>
-                <li *ngFor="let subject of data.subjects">{{ subject.subjectTitle }}: {{ subject.marks }}</li>
-              </ul>
-            </td> -->
-          </tr>
-        </tbody>
-      </table>
     </div>
-  </div>
-  
+    
+
+    
+
+    <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-700" [disabled]="form.invalid">
+      Submit
+    </button>
+  </form>
+
+  <!-- Submitted Data Table -->
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+              <th scope="col" class="px-6 py-3">
+                Full Name
+              </th>
+              <th scope="col" class="px-6 py-3">
+                Gender
+              </th>
+              <th scope="col" class="px-6 py-3">
+                Email
+              </th>
+              <th scope="col" class="px-6 py-3">
+                Mobile
+              </th>
+
+              <th scope="col" class="px-6 py-3">
+                Date of Birth
+              </th>
+              <th scope="col" class="px-6 py-3">
+                Subjects
+              </th>
+             
+          </tr>
+      </thead>
+      <tbody>
+          <tr  *ngFor="let data of submittedData" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                {{ data.firstName }} {{ data.middleName }} {{ data.lastName }}
+              </th>
+              <td class="px-6 py-4">
+                {{ data.gender }}
+              </td>
+              <td class="px-6 py-4">
+                {{ data.email }}
+              </td>
+              <td class="px-6 py-4">
+                {{ data.mobile }}
+              </td>
+              <td class="px-6 py-4">
+                {{ data.dob | date }}
+              </td>
+              <td class="px-6 py-4">
+                <ul>
+                  <li *ngFor="let subject of data.subjects">{{ subject.subjectTitle }}: {{ subject.marks }}</li>
+                </ul>
+              </td>     
+          </tr>
+         
+        
+      </tbody>
+  </table>
+</div>
+
+</div>
