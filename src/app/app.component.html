@@ -131,9 +131,9 @@
       <table class="min-w-full table-auto border-collapse">
         <thead>
           <tr class="border-b">
-            <th class="px-4 py-2">First Name</th>
-            <th class="px-4 py-2">Middle Name</th>
-            <th class="px-4 py-2">Last Name</th>
+            <th class="px-4 py-2">Full Name</th>
+            <!-- <th class="px-4 py-2">Middle Name</th>
+            <th class="px-4 py-2">Last Name</th> -->
             <th class="px-4 py-2">Gender</th>
             <th class="px-4 py-2">Email</th>
             <th class="px-4 py-2">Mobile</th>
@@ -143,9 +143,9 @@
         </thead>
         <tbody>
           <tr *ngFor="let data of submittedData">
-            <td class="px-4 py-2">{{ data.firstName }}</td>
-            <td class="px-4 py-2">{{ data.middleName }}</td>
-            <td class="px-4 py-2">{{ data.lastName }}</td>
+            <td class="px-4 py-2">{{ data.firstName }} {{ data.middleName }} {{ data.lastName }}</td>
+            <!-- <td class="px-4 py-2">{{ data.middleName }}</td>
+            <td class="px-4 py-2">{{ data.lastName }}</td> -->
             <td class="px-4 py-2">{{ data.gender }}</td>
             <td class="px-4 py-2">{{ data.email }}</td>
             <td class="px-4 py-2">{{ data.mobile }}</td>
